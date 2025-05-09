@@ -56,13 +56,14 @@ function showItems(){
 function addItem(e){
     e.preventDefault();
 
-    let string = item_input.value;
-    if(string !== "" && !items_array.includes(string)){
-        items_array.push(string);
+    let new_string = item_input.value;
+    console.log(new_string)
+    if(new_string !== "" && !items_array.includes(new_string)){
+        items_array.push(new_string);
     }
     
-    showItems();
     updateCache();
+    showItems();
 }
 
 // Filter the items by typing in the filter field
